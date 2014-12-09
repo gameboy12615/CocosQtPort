@@ -1,12 +1,12 @@
 CocosQtPort
 ===========
-
-This is porting code, which prot cocos2d-x3.3 to QT5.3.
-It is useful for coding a game editor.
-
-How to use?
-1. copy CocoQtPort directory to your Classes folder. 
-2. change AppDelegate to inherit form cocos2d::CCQApplication. add a member, like:
+<br>
+This is porting code, which prot cocos2d-x3.3 to QT5.3.<br>
+It is useful for coding a game editor.<br>
+<br>
+How to use?<br>
+1. copy CocoQtPort directory to your Classes folder. <br>
+2. change AppDelegate to inherit form cocos2d::CCQApplication. add a member, like:<br>
 ```
 class  AppDelegate : private cocos2d::CCQApplication
 {
@@ -18,8 +18,8 @@ protected:
 	CCGEditor _mainWindow;  // CCGEditor is the MainWindow class which you created in QT.
 }
 ```
-
-3. modify AppDelegate::applicationDidFinishLaunching(), use CCQGLView to create glview. like:
+<br>
+3. modify AppDelegate::applicationDidFinishLaunching(), use CCQGLView to create glview. like:<br>
 ```
 bool AppDelegate::applicationDidFinishLaunching() {
 	// initialize director
@@ -33,9 +33,9 @@ bool AppDelegate::applicationDidFinishLaunching() {
 ......
 }
 ```
-
-4. Modify your QT MainWindow class (here is CCGEditor):
-CCGEditor.h
+<br>
+4. Modify your QT MainWindow class (here is CCGEditor):<br>
+CCGEditor.h<br>
 ```
 class CCGEditor : public QMainWindow
 {
@@ -56,8 +56,8 @@ private:
 	QWidget *_glWidget;
 };
 ```
-
-CCGEditor.cpp
+<br>
+CCGEditor.cpp<br>
 ```
 CCGEditor::CCGEditor(QWidget *parent)
 	: QMainWindow(parent),
@@ -84,8 +84,8 @@ void CCGEditor::setGLView(QWidget *glWidget)
 	}
 }
 ```
-
-5. modify the main function in this way:
+<br>
+5. modify the main function in this way:<br>
 ```
 int main(int argc, char *argv[])
 {
@@ -93,5 +93,5 @@ int main(int argc, char *argv[])
 	return cocos2d::CCQApplication::getInstance()->run();
 }
 ```
-
+<br>
 6. do not forget the header files_(:зゝ∠)_
