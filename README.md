@@ -1,7 +1,7 @@
 CocosQtPort
 ===========
 <br>
-This is porting code, which prot cocos2d-x3.3 to QT5.3.<br>
+This is porting code, which port cocos2d-x3.3 to QT5.3.<br>
 It is useful for coding a game editor.<br>
 <br>
 How to use?<br>
@@ -94,4 +94,7 @@ int main(int argc, char *argv[])
 }
 ```
 <br>
-6. do not forget the header files_(:зゝ∠)_
+6. do not forget the header files_(:зゝ∠)_<br>
+<br>
+See my blog for detail:<br>
+http://www.cnblogs.com/marisa/p/4141862.html
